@@ -1,8 +1,7 @@
 <VirtualHost *:80>
-	ServerName duke.zmotauto.com
-    ServerAlias www.duke.zmotauto.com
-    DocumentRoot <%= @params[:docroot] %>/site1
-    ServerAdmin webmaster@duke.zmotauto.com
+    ServerName test-dev.zmotauto.com
+    ServerAlias test-www.dev.zmotauto.com
+    DocumentRoot <%= @params[:docroot] %>/dev
 
   <Directory <%= @params[:docroot] %>>
     Options FollowSymLinks
