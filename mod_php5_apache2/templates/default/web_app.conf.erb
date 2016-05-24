@@ -1,3 +1,6 @@
+LoadModule cgi_module modules/mod_cgi.so
+AddHandler cgi-script .cgi .pl
+
 <VirtualHost *:80>
     ServerName test-dev.zmotauto.com
     ServerAlias test-www.dev.zmotauto.com
@@ -9,6 +12,12 @@
     Order allow,deny
     Allow from all
   </Directory>
+
+ <Directory "<%= @params[:docroot] %>dev/cgi-bin">
+    Options +ExecCGI
+    AddHandler cgi-script .pl
+ </Directory>
+
 
   <Directory ~ "\.svn">
     Order allow,deny
@@ -73,6 +82,12 @@
     Order allow,deny
     Allow from all
   </Directory>
+
+ <Directory "<%= @params[:docroot] %>dev/cgi-bin">
+    Options +ExecCGI
+    AddHandler cgi-script .pl
+ </Directory>
+
 
   <Directory ~ "\.svn">
     Order allow,deny
@@ -361,6 +376,12 @@
     Allow from all
   </Directory>
 
+ <Directory "<%= @params[:docroot] %>vx/cgi-bin">
+    Options +ExecCGI
+    AddHandler cgi-script .pl
+ </Directory>
+
+
   <Directory ~ "\.svn">
     Order allow,deny
     Deny from all
@@ -424,6 +445,12 @@
     Order allow,deny
     Allow from all
   </Directory>
+
+ <Directory "<%= @params[:docroot] %>vx/cgi-bin">
+    Options +ExecCGI
+    AddHandler cgi-script .pl
+ </Directory>
+
 
   <Directory ~ "\.svn">
     Order allow,deny
