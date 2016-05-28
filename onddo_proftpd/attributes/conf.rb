@@ -57,12 +57,12 @@ default['proftpd']['conf']['port'] = 21
 # In some cases you have to specify passive ports range to by-pass
 # firewall limitations. Ephemeral ports can be used for that, but
 # feel free to use a more narrow range.
-# default['proftpd']['conf']['passive_ports'] = '49152 65534'
+default['proftpd']['conf']['passive_ports'] = '60000 65534'
 
 # If your host was NATted, this option is useful in order to
 # allow passive tranfers to work. You have to use your public
 # address and opening the passive ports used on your firewall as well.
-# default['proftpd']['conf']['masquerade_address'] = '1.2.3.4'
+default['proftpd']['conf']['masquerade_address'] = '52.72.236.228'
 
 # To prevent DoS attacks, set the maximum number of child processes
 # to 30.  If you need to allow more than 30 concurrent connections
