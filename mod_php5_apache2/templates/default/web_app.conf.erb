@@ -8,7 +8,7 @@ AddHandler cgi-script .cgi .pl
     ServerName <%= site[:ServerName] %>
     ServerAlias <%= site[:ServerAlias] %>
     DocumentRoot <%= @params[:docroot] %><%= site[:DocumentRoot] %>
-    ServerAdmin webmaster@duke.zmotauto.com
+    ServerAdmin it@zmotauto.com
 
   <Directory <%= @params[:docroot] %>>
     Options FollowSymLinks
