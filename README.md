@@ -1,6 +1,6 @@
 # zmotPHPOpsWorks
 
-'''json{
+```json{
     "apache":{
         "log_level": "warn"
     },
