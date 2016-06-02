@@ -62,7 +62,7 @@ default['proftpd']['conf']['passive_ports'] = '60000 65534'
 # If your host was NATted, this option is useful in order to
 # allow passive tranfers to work. You have to use your public
 # address and opening the passive ports used on your firewall as well.
-default['proftpd']['conf']['masquerade_address'] = '52.72.236.228'
+default['proftpd']['conf']['masquerade_address'] = node["opsworks"]["instance"]["ip"]
 
 # To prevent DoS attacks, set the maximum number of child processes
 # to 30.  If you need to allow more than 30 concurrent connections
