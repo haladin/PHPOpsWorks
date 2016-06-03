@@ -16,5 +16,5 @@ ruby_block "set-up S3 Archive on NFS storage service" do
             action :create
         end
     end
-    not_if { deploy[:application] != 'admin_scripts'}
+    not_if { node[:deploy][:application] != 'admin_scripts'}
 end
